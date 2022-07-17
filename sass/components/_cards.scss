@@ -1,0 +1,94 @@
+.cards
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    &__item
+    {
+        width: 35rem;
+        height: 20rem;
+        margin-top: 10rem;
+        box-shadow: 0 0 2px rgba(black, .5) inset;
+        background:
+        {
+            position: right;
+            repeat: no-repeat;
+            size: 90%;
+        }
+        -webkit-clip-path: polygon(0 0, 100% 1%, 36% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 1%, 41% 100%, 0% 100%);
+
+        &__title
+        {
+            width: inherit;
+            height: inherit;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            font:
+            {
+                family: sans-serif;
+                size: 10pt;
+                weight: 600;
+            }
+            &--1
+            {
+                width: inherit;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                padding-top: .4rem;
+                &--1
+                {
+                    padding-left: .5rem;
+                    
+                }
+
+                &--2
+                {
+                    padding-right: 2rem;
+                }
+            }
+
+            &--2
+            {
+                width: inherit;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                padding-bottom: .4rem;
+                padding-left: .5rem;
+
+                span
+                {
+                    font-size: 7pt;
+                }
+                &--1
+                {
+                    margin-right: 2rem;
+                }
+
+                &--2
+                {
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+#first
+{
+    background-image: url("../pic/car1.png");
+}
+
+#second
+{
+    background-image: url("../pic/car4.png");
+}
+
+#third
+{
+    background-image: url("../pic/car2.png");
+}

@@ -1,0 +1,68 @@
+@import "../abstracts/mixin";
+
+.header
+{
+    margin: 4rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive-large 
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    &__title
+    {
+        font:
+        {
+            size: 3.15rem;
+            family: sans-serif;
+            weight: 300;
+        }
+
+        color: rgba(black, .6);
+        animation: leftToRight 800ms ease-in-out;        
+
+        @include responsive-large 
+        {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__profile
+    {
+        @include responsive-large 
+        {
+            margin-top: 5rem;
+        }
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        &--title
+        {
+            font:
+            {
+                size: 2.15rem;
+                family: sans-serif;
+                weight: 300;
+            }
+            text-decoration: none;
+            margin-right: 2rem;
+            &:hover
+            {
+                color: orange;
+            }
+        }
+
+        &--img
+        {
+            width: 5rem;
+            border-radius: 50%;
+            box-shadow: 0 0 3px 1px rgba(black, .6);
+        }
+    }
+}
